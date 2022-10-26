@@ -13,7 +13,7 @@ body {
     width: 100%;
 }
 
-.wavy, h2, form {
+.wavy, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* Title */
 .wavy {
     position: relative;
     -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
@@ -28,14 +29,14 @@ body {
 
 .wavy h1 {
     position: relative;
-    margin-top: 20%;
+    margin-top: 10%;
     display: inline-block;
     color: rgb(255, 255, 255);
     font-size: 4em;
     animation: animate 3s ease-in-out infinite;
 }
 h1 {
-        font-family: 'Righteous', cursive;
+        font-family: 'Righteous', 'cursive';
         text-shadow:1px 1px 10px #fff, 1px 1px 9px rgb(194, 132, 211);
         -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
@@ -53,9 +54,55 @@ h1 {
         transform: translateY(0px);
     }
 }
+/* end of title */
 
+/* sec2 */
 h2 {
-    margin-top: 10%;
+    margin-top: 8%;
     font-family: 'Questrial', sans-serif;
     min-height: 5vh;
 }
+/* end of sec2 */
+
+/* form */
+input {
+    padding: 15px 50px 15px 15px;
+    font-size: 15px;
+    width: 48%;
+    display: block;
+    margin: 4% auto 4% auto;
+    border: 0;
+    border-radius: 30px;
+}
+
+button { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4%;
+    padding: 2% 6%;
+    border: solid 2px rgb(30, 31, 50);
+    border-radius: 50px;
+    font-family: 'Righteous', 'cursive';
+    color: rgb(255, 255, 255);
+    background: rgb(58, 30, 74);
+    transition: 1s;
+}
+button:hover {
+    background-color: rgb(179, 76, 154);
+}
+
+button:active {
+    background-color:  rgb(15, 11, 93);
+}
+/* end of form */
+
+/* img */
+img {
+    width: 40%;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* img end */

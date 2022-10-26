@@ -7,20 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
-    <title>Magic 8 - Yes or No</title>
+    <title>Magic 8 - Fortune</title>
 </head>
 <body>
     <div class="wavy">
         <h1>Magic8Ball</h1>    
     </div>
     <h2>Type your question below</h2>
+    <div class="inputfield">
+        <input type="text" name="question" id="question" value="" placeholder="Ask me anything!">
+        <button id="askme" type="submit" onclick="getRandomImage()">Reveal Answer</button>
+    </div>
 
-    <form id="form">
-        <label for="questionbox">Ask Me Anything!</label>
-        <input type="text" name="question" id="question" value="" placeholder="">
-        <input type="submit" name="ask"  id="askbtn" value="Ask...">
-     </form>
-
-     <div id="answers"><img id="ball" src=""></img></div>
+     <div id="response">
+        <img id="ball" src="./img/14-142815_magic-eight-ball-magic-8-ball-background.png" alt="Magic 8 Ball png"></img>
+    </div>
 </body>
 </html>
