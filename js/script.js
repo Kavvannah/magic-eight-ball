@@ -1,30 +1,36 @@
-function path() {
+const question = document.getElementById("question");
+const ask = document.getElementById("ask");
+const ball = document.getElementById("ball");
+const answer = document.getElementById("answer")
+
+
+const answers = Array ("It is decidedly so",
+                        "Cannot predict now",
+                        "My sources say no",
+                        "Yes definitely",
+                        "Concentrate and ask again",
+                        "Outlook not so good","As I see it, Yes!");
+let index = 0;
+
+ask.onclick = (e) => {
+    e.preventDefault();
     
-    let randoNumber = Math.floor(Math.random() *7);
-
-        // img array
-        return  randoNumber === 1? "/img/magi1.png"
-        :       randoNumber === 2? "/img/magi2.png"
-        :       randoNumber === 3? "/img/magi3.png"
-        :       randoNumber === 4? "/img/magi4.png"
-        :       randoNumber === 5? "/img/magi5.png"
-        :       randoNumber === 6? "/img/magi6.png"
-        :       randoNumber === 7? "/img/magi7.png"
-        : console.log('Error Occurred: Something wrong with path()')
-        // img array end
+    if (question.value == "" || question.value.length < 4) {
+    alert('You must ask me a question');
+    return;
     }
-
-    // empty alert
-    function alertResponse() {
-        const ask = document.getElementById('question').value;
-        console.log(ask)
-
-            if (ask=="" || ask.indexOf("?")<0){
-            alert('Do not be afraid, ask your question')
-            }
-            else{
-                document.getElementById("ball").setAttribute("src","/img/14-142815_magic-eight-ball-magic-8-ball-background.png")
-            }
-    }
-    //end of empty alert
-        
+    index = Math.floor(Math.random(1) *
+    answers.length);
+     shake(answers[index]);
+};
+function shake($answer) {
+  answer.classList.remove("answered");
+  ball.classList.remove("shake");
+  setTimeout(function () {
+    ball.classList.add("shake");
+    answer.innerText = $answer;
+  }, 10);
+  setTimeout(function () {
+    answer.classList.add("answered");
+  }, 1010);
+}
