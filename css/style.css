@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('/img/strrynght.gif');
+    background-image: url('./img/strrynght.gif');
     background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
