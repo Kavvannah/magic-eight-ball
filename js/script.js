@@ -14,18 +14,18 @@ let index = 0;
 
 ask.onclick = (e) => {
     e.preventDefault();
-    
+
     if (question.value == "" || question.value.length < 4) {
     alert('You must ask me a question');
     return;
     }
-    index = Math.floor(Math.random(1) *
-    answers.length);
-     shake(answers[index]);
+        index = Math.floor(Math.random(1) *
+        answers.length);
+        shake(answers[index]);
 };
 function shake($answer) {
-  answer.classList.remove("answered");
-  ball.classList.remove("shake");
+    answer.classList.remove("answered");
+    ball.classList.remove("shake");
   setTimeout(function () {
     ball.classList.add("shake");
     answer.innerText = $answer;
