@@ -10,7 +10,21 @@ function path() {
         :       randoNumber === 5? "/img/magi5.png"
         :       randoNumber === 6? "/img/magi6.png"
         :       randoNumber === 7? "/img/magi7.png"
-        : console.log('Error Occured: Something wrong with path()')
+        : console.log('Error Occurred: Something wrong with path()')
         // img array end
     }
+
+    // empty alert
+    function alertResponse() {
+        const ask = document.getElementById('question').value;
+        console.log(ask)
+
+            if (ask=="" || ask.indexOf("?")<0){
+            alert('Do not be afraid, ask your question')
+            }
+            else{
+                document.getElementById("ball").setAttribute("src","/img/14-142815_magic-eight-ball-magic-8-ball-background.png")
+            }
+    }
+    //end of empty alert
         
